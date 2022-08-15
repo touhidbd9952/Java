@@ -1,0 +1,15 @@
+//find the highest value
+Math.max(x,y)Math.min(x,y)
+
+//find the lowest value
+Math.min(x,y)
+
+//square root of x
+Math.sqrt(x)
+
+//absolute (positive) value of x
+Math.abs(x)
+
+//random number like 0.567955106641803
+Math.random();
+int randomNum = (int)(Math.random() * 101);  // 0 to 100

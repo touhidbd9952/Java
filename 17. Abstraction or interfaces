@@ -1,0 +1,36 @@
+To achieve security - hide certain details and only show the important details of an object.
+Abstraction can be achieved with abstract classes or interfaces
+
+1. Abstract class: can not be create object of this class
+2. Abstract method: this class methods has no body. 
+3. An abstract class can have both abstract and regular methods
+
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  
+  // Regular method
+  public void sleep() 
+  {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Dog extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: Bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Dog myDog = new Dog(); // Create a Pig object
+    myDog.animalSound();
+    myDog.sleep();
+  }
+}
+
+

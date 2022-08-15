@@ -1,0 +1,22 @@
+
+/////Syntax///////////////////////////////////////////////////////
+
+import package.name.Class;   // Import a single class
+import package.name.*;   // Import the whole package
+
+
+import java.util.Scanner;  //import Scanner library
+import java.util.*;  //import all util library
+
+
+class MyClass {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter username");
+
+    String userName = myObj.nextLine();
+    System.out.println("Username is: " + userName);
+  }
+}
+
+

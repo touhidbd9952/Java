@@ -1,0 +1,27 @@
+1. Inner Classes is nest classes. The purpose of nested classes is to group classes that makes code more readable and maintainable.
+2. To access the inner class, 
+        a. first, create object of outer class
+        b. second, create object of inner class
+        
+
+class OuterClass 
+{
+  int x = 10;
+
+  class InnerClass 
+  {
+    int y = 5;
+  }
+}
+
+public class Main 
+{
+  public static void main(String[] args) 
+  {
+    OuterClass myOuter = new OuterClass(); //a
+    OuterClass.InnerClass myInner = myOuter.new InnerClass(); //b
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+// Outputs 15 (5 + 10)

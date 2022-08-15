@@ -1,0 +1,71 @@
+/////java method/function 
+public class MyClass 
+{
+  static void myMethod(String fname) 
+  {
+    System.out.println(fname + " Refsnes");
+  }
+
+  public static void main(String[] args) 
+  {
+    myMethod("Liam");
+  }
+}
+
+//Creating Object///////////
+MyClass myObj = new MyClass();
+
+//Attributes or class variable
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj.x);
+  }
+}
+
+//Methods
+// Static method
+  static void myStaticMethod() 
+  {
+    System.out.println("Static methods can be called without creating objects");
+  }
+  
+  // Public method
+  public void myPublicMethod() 
+  {
+    System.out.println("Public methods must be called by creating objects");
+  }
+
+//Constructors//////////////////
+A constructor is a special method that is used to initialize objects. 
+The constructor is called when an object of a class is created. 
+It can be used to set initial values for object attributes
+
+public class Main 
+{
+  int x;  // Create a class attribute
+  int modelYear;
+  String modelName;
+
+  // default constructor
+  public Main() 
+  {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+  public Main(int year, String name) {
+    modelYear = year;
+    modelName = name;
+  }
+}
+
+////method overloading////////////////////////////////////
+method overloading: multiple methods can have the same name with different parameters
+static int plusMethodInt(int x, int y) {
+  return x + y;
+}
+static double plusMethodDouble(double x, double y) {
+  return x + y;
+}
+ 

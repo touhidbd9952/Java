@@ -13,10 +13,15 @@ Syntex
     variabletype variableName = value;
     
     int myNum = 5;
+    short myNum = 5000;
+    long myNum = 15000000000L;
     float myFloatNum = 5.99f;
+    double myNum = 19.99d;
     char myLetter = 'D';
     boolean myBool = true;
-    String myText = "Hello";
+    String myText = "Hello";  //non-primitive type or reference types
+    
+    char myVar1 = 65, myVar2 = 66, myVar3 = 67;
     
     
 Data    Type 	    Size 	

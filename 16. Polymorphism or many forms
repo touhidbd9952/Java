@@ -1,0 +1,30 @@
+//Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance
+
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Cow extends Animal {
+  public void animalSound() {
+    System.out.println("The cow says: hamba hamba");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object from Animal constructor
+    Animal myCow = new Cow();  // Create a Cow object from Cow constructor
+    Animal myDog = new Dog();  // Create a Dog object from Dog constructor
+    myAnimal.animalSound();  //output: The animal makes a sound
+    myCow.animalSound();  //output: The cow says: hamba hamba
+    myDog.animalSound();  //output: The dog says: bow wow
+  }
+}

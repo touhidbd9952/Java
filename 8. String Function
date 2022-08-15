@@ -1,0 +1,43 @@
+String txt = "Hello World";
+txt.length()  //counting
+txt.toUpperCase()  // Outputs "HELLO WORLD"
+txt.toLowerCase()  // Outputs "hello world"
+txt.indexOf("World") //find index of purticular word or character
+
+/////Concatenation////
+1.
+String firstName = "John";
+String lastName = "Doe";
+System.out.println(firstName + " " + lastName);
+
+2.
+String firstName = "John ";
+String lastName = "Doe";
+System.out.println(firstName.concat(lastName));
+
+3.
+String x = "10";
+String y = "20";
+String z = x + y;  // z will be 1020 
+
+/////add Special Character in Sentence/////
+
+String txt = "We are the so-called \"Vikings\" from the north.";   //We are the so-called "Vikings" from the north.  
+String txt = "It\'s alright.";   //It's alright.
+String txt = "The character \\ is called backslash.";  //The character \ is called backslash.
+
+Code 	Result 	
+---------------------------
+\n 	  New Line 	
+\r 	  Carriage Return 	
+\t 	  Tab 	
+\b 	  Backspace 	
+\f 	  Form Feed
+
+  
+
+
+
+
+
+

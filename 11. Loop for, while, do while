@@ -1,0 +1,48 @@
+/////While loop///////////////////
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+
+/////do while loop/////////////////
+int i = 0;
+do {
+  System.out.println(i);
+  i++;
+}
+while (i < 5);
+
+//////For loop////////////////////
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+
+//////Foreach loop///////////////
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+
+
+////////Break/Continue/////////////
+//Break used to jump out of a loop.
+int i = 0;
+while (i < 10) {
+  System.out.println(i);
+  i++;
+  if (i == 4) {
+    break;
+  }
+}
+
+//Continue used to continues with the next iteration in the loop
+int i = 0;
+while (i < 10) {
+  if (i == 4) {
+    i++;
+    continue;
+  }
+  System.out.println(i);
+  i++;
+}

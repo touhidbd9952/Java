@@ -1,0 +1,11 @@
+//Single-line Comments use // before your code or text
+
+System.out.println("Hello World"); // This is single line comment
+
+
+
+//multi line comment use /* your comments */
+
+/* 
+  multi line comment here
+*/

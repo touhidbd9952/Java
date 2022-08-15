@@ -1,0 +1,15 @@
+//open a note pad and type below code
+
+public class MyHelloClass 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("Hello World");
+    }
+}
+
+1. save it as "MyHelloClass.java"  save type as "All File"
+2. open command prompt: cmd
+3. to compile java program: javac MyHelloClass.java  (enter)
+4. to java compiled file: java MyHelloClass  (enter)
+

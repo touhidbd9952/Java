@@ -1,0 +1,93 @@
+Threads:
+-------------
+Threads helps a program to operate multiple things at the same time.
+threads run at the same time as other parts of the program
+
+//////Creating a Thread////////
+To create a Thread, 
+1. need to extend the Thread class
+2. need to override its run() method
+
+how a tread works:
+----------------------------------
+1. create thread from extend thread class or Runnable interface
+2. create thread obj from new thread class constructor
+3. thread start
+4. call run method
+5. wait until run method complete its operation
+6. run other code outsite thread
+
+
+public class Main extends Thread 
+{
+  public void run() 
+  {
+    System.out.println("This code is running in a thread");
+  }
+}
+
+---or--- 
+
+we can create a thread by implement the Runnable interface
+
+public class Main implements Runnable 
+{
+  public void run() 
+  {
+    System.out.println("This code is running in a thread");
+  }
+}
+
+//////////Concurrency Problems///////////////////////////////////////////////////////////
+
+Because threads run at the same time as other parts of the program, there is no way 
+to know in which order the code will run. When the threads and main program are 
+reading and writing the same variables, the values are unpredictable. The problems 
+that result from this are called concurrency problems.
+
+Use isAlive() to prevent concurrency problems
+
+public class Main extends Thread 
+{
+  public static int amount = 0;
+
+  public static void main(String[] args) 
+  {
+    Main thread = new Main();
+    thread.start();
+    // Wait for the thread to finish
+    while(thread.isAlive()) 
+    {
+      System.out.println("Waiting...");
+    }
+    // Update amount and print its value
+    System.out.println("Main: " + amount);
+    amount++;
+    System.out.println("Main: " + amount);
+  }
+  public void run() 
+  {
+    amount++;
+  }
+}
+
+////output////
+0
+2 
+
+
+/////////Life cycle of a Thread///////////////////////////////////
+
+    1. New : Whenever a new thread is created
+    2. Active : When a thread invokes the start() method, it moves from the new state to the active state.
+                active state contains two states a. runnable  b. running.
+                a. Runnable: A thread, that is ready to run is then moved to the runnable state.
+                          In runnable state, the thread may be running or may be ready to run at given time.
+                b. Running: When the thread gets the CPU, it moves from runnable to running state.
+         
+    3. Blocked / Waiting : Whenever a thread is inactive for a span of time (not permanently) then the thread 
+                           is in the blocked state or in the waiting state.
+    4. Timed Waiting : Sometimes, waiting for leads to starvation. For example, a thread (its name is A) has 
+                       entered the critical section of a code and is not willing to leave that critical section.
+    5. Terminated : When a thread has finished its job, then it exists or terminates normally.
+

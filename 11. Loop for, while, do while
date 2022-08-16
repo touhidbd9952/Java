@@ -25,21 +25,59 @@ for (String i : cars) {
 }
 
 
-////////Break/Continue/////////////
-//Break used to jump out of a loop.
-int i = 0;
-while (i < 10) {
-  System.out.println(i);
-  i++;
-  if (i == 4) {
-    break;
+////////Iterator////////////////
+  Iterator is an object that can be used as loop like foreach loop
+  
+  example:
+  -----------------
+  // Import the ArrayList class and the Iterator class
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main 
+{
+  public static void main(String[] args) 
+  {
+
+    // Make a collection
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+
+    // Get the iterator
+    Iterator<String> it = cars.iterator();
+
+    // Print the first item
+    System.out.println(it.next());
   }
 }
 
+
+
+
+////////Break/Continue/////////////
+//Break used to jump out of a loop.
+int i = 0;
+while (i < 10) 
+{
+  System.out.println(i);
+  i++;
+  if (i == 4) 
+  {
+    break;
+  }
+}
+  
+ 
+
 //Continue used to continues with the next iteration in the loop
 int i = 0;
-while (i < 10) {
-  if (i == 4) {
+while (i < 10) 
+{
+  if (i == 4) 
+  {
     i++;
     continue;
   }

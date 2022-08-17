@@ -1,6 +1,6 @@
 Lambda expressions:
 ---------------------------------------
-Lambda expressions are similar to methods(function), but here no need to give method name and only need to diclare method body.
+Lambda expressions are similar to methods(function), but here no need to give method name and only need to diclare method parameter and body.
 
 syntax
 -----------

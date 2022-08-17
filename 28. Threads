@@ -41,11 +41,12 @@ public class Main implements Runnable
 //////////Concurrency Problems///////////////////////////////////////////////////////////
 
 Threads run at the same time as other parts of the program, there is no way 
-to know in which order the code will run. When the threads and main program are 
-reading and writing the same variables, the values are unpredictable. The problems 
-that occure from this situation are called concurrency problems.
+to know in which order the code will run. 
 
-Use isAlive() to prevent concurrency problems
+When the threads and main program are reading and writing the same variables, the values of variables
+are unpredictable. The problems that occure from this situation are called concurrency problems.
+
+we can use isAlive() to prevent concurrency problems.
 
 public class Main extends Thread 
 {
@@ -55,11 +56,13 @@ public class Main extends Thread
   {
     Main thread = new Main();
     thread.start();
+    
     // Wait for the thread to finish
     while(thread.isAlive()) 
     {
       System.out.println("Waiting...");
     }
+    
     // Update amount and print its value
     System.out.println("Main: " + amount);
     amount++;
@@ -79,15 +82,18 @@ public class Main extends Thread
 /////////Life cycle of a Thread///////////////////////////////////
 
     1. New : Whenever a new thread is created
+    
     2. Active : When a thread invokes the start() method, it moves from the new state to the active state.
                 active state contains two states a. runnable  b. running.
-                a. Runnable: A thread, that is ready to run is then moved to the runnable state.
+                a. Runnable: A thread that is ready to run, is then moved to the runnable state.
                           In runnable state, the thread may be running or may be ready to run at given time.
                 b. Running: When the thread gets the CPU, it moves from runnable to running state.
          
-    3. Blocked / Waiting : Whenever a thread is inactive for a span of time (not permanently) then the thread 
+    3. Blocked / Waiting : Whenever a thread is in-active for a particular of time (not permanently) then the thread 
                            is in the blocked state or in the waiting state.
-    4. Timed Waiting : Sometimes, waiting for leads to starvation. For example, a thread (its name is A) has 
-                       entered the critical section of a code and is not willing to leave that critical section.
+                           
+    4. Timed Waiting : Sometimes, a thread need to wait to complete other thread task. For example, thread A has 
+                       entered the critical section of a code and it (thread A) is not willing to leave that critical section.
+                       
     5. Terminated : When a thread has finished its job, then it exists or terminates normally.
 

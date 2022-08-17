@@ -8,7 +8,7 @@ syntax
 
 example-1
 -----------------------
-mport java.util.ArrayList;
+import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) {

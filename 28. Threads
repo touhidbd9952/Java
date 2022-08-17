@@ -5,7 +5,7 @@ threads run at the same time as other parts of the program
 
 //////Creating a Thread////////
 To create a Thread, 
-1. need to extend the Thread class
+1. need to extend the Thread class or need to implements Runnable interface
 2. need to override its run() method
 
 how a tread works:

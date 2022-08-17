@@ -1,6 +1,5 @@
 All Math Methods
 
-A list of all Math methods can be found in the table below:
 Method 	    Description 	                                                                                Return Type
 -----------------------------------------------------------------------------------------------------------------------------------
 abs(x) 	    Returns the absolute value of x 	                                                            double|float|int|long

@@ -1,21 +1,21 @@
 
 1. set debug point by double click 
-2. click on "debug" button (at the top to go Java code debug mode)
+2. click on "debug" button (at the top to go Java code "debug mode")
 3. click "switch" button to open "Debug prespective"
 
-Step Over
+Step Over F6
 ---------------------------
 line by line execute
 
-Step into
+Step into F5
 ---------------------------
 to execute particular function 
 
-Step return
+Step return F7
 ---------------------------
 to back main execute point
 
-Terminate "red button"
+Terminate "red button"   ctrl + F2
 ---------------------------
 To stop debuging
 
